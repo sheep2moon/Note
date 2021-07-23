@@ -32,7 +32,10 @@ const ThemeSwitch = ({ setTheme }) => {
             <ListItem
               key={color.light}
               color={color}
-              onClick={() => setTheme(themes[index])}
+              onClick={() => {
+                setTheme(themes[index]);
+                togglePalette();
+              }}
             />
           ))}
         </PaletteList>
